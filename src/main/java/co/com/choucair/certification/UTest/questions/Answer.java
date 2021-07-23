@@ -21,16 +21,13 @@ public class Answer implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-
         boolean result;
-
         String welcomeText = Text.of(WelcomePage.WELCOME_TEXT).viewedBy(actor).asString();
         if (question.equals(welcomeText)){
             result = true;
         }else{
             result = false;
         }
-
         return result;
     }
 }
